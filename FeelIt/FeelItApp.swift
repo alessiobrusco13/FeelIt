@@ -12,12 +12,16 @@ struct FeelItApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+#if !os(macOS)
                 .onAppear {
                     setUpNavigationTitleFont()
                 }
+#endif
         }
+        .modelContainer(for: Palette.self)
     }
     
+    #if !os(macOS)
     func setUpNavigationTitleFont() {
         let appearence = UINavigationBar.appearance()
         
@@ -30,4 +34,5 @@ struct FeelItApp: App {
         appearence.largeTitleTextAttributes = [.font: largeTitleFontMetrics.scaledFont(for: largeNavTitleFont)]
         appearence.titleTextAttributes = [.font: headlineFontMetrics.scaledFont(for: navTitleFont)]
     }
+    #endif
 }

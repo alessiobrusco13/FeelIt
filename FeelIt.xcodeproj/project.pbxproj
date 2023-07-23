@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8941A1B42A6D7FD40000F4B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941A1B32A6D7FD40000F4B7 /* ContentView.swift */; };
+		8941A1B62A6D8A320000F4B7 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941A1B52A6D8A320000F4B7 /* Palette.swift */; };
+		8941A1B82A6D90F50000F4B7 /* PaletteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941A1B72A6D90F50000F4B7 /* PaletteItem.swift */; };
+		8941A1BC2A6D94DA0000F4B7 /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941A1BB2A6D94DA0000F4B7 /* Feeling.swift */; };
 		8961EE312A51961C00ED28A1 /* FeelItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8961EE302A51961C00ED28A1 /* FeelItApp.swift */; };
 		8961EE352A51961D00ED28A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8961EE342A51961D00ED28A1 /* Assets.xcassets */; };
 		8961EE382A51961D00ED28A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8961EE372A51961D00ED28A1 /* Preview Assets.xcassets */; };
@@ -15,6 +18,9 @@
 
 /* Begin PBXFileReference section */
 		8941A1B32A6D7FD40000F4B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8941A1B52A6D8A320000F4B7 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		8941A1B72A6D90F50000F4B7 /* PaletteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteItem.swift; sourceTree = "<group>"; };
+		8941A1BB2A6D94DA0000F4B7 /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		8961EE2D2A51961C00ED28A1 /* FeelIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeelIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8961EE302A51961C00ED28A1 /* FeelItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelItApp.swift; sourceTree = "<group>"; };
 		8961EE342A51961D00ED28A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +59,9 @@
 			children = (
 				8961EE302A51961C00ED28A1 /* FeelItApp.swift */,
 				8941A1B32A6D7FD40000F4B7 /* ContentView.swift */,
+				8941A1B52A6D8A320000F4B7 /* Palette.swift */,
+				8941A1B72A6D90F50000F4B7 /* PaletteItem.swift */,
+				8941A1BB2A6D94DA0000F4B7 /* Feeling.swift */,
 				8961EE342A51961D00ED28A1 /* Assets.xcassets */,
 				8961EE362A51961D00ED28A1 /* Preview Content */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8941A1B62A6D8A320000F4B7 /* Palette.swift in Sources */,
+				8941A1BC2A6D94DA0000F4B7 /* Feeling.swift in Sources */,
 				8941A1B42A6D7FD40000F4B7 /* ContentView.swift in Sources */,
+				8941A1B82A6D90F50000F4B7 /* PaletteItem.swift in Sources */,
 				8961EE312A51961C00ED28A1 /* FeelItApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +300,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessiobrusco.FeelIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -318,6 +333,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessiobrusco.FeelIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
