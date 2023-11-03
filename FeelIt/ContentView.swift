@@ -9,8 +9,18 @@ import SwiftData
 import SwiftUI
 
 struct ContentView: View {
+    @Query var palettes: [Palette]
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationStack {
+            List(palettes) { palette in
+                DisclosureGroup("Colors") {
+                    ForEach(palette.items) { item in
+                        Color(data: item.colorData)
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -9,21 +9,36 @@ import SwiftUI
 
 @main
 struct FeelItApp: App {
+    #if DEBUG
+    @State private var showingDebug = false
+    #endif
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-#if !os(macOS)
+                #if !os(macOS)
                 .onAppear {
                     setUpNavigationTitleFont()
                 }
-#endif
+                #endif
+                #if DEBUG
+                .gesture(
+                    TapGesture(count: 3)
+                        .onEnded { _ in
+                            showingDebug.toggle()
+                        }
+                )
+                .sheet(isPresented: $showingDebug) {
+                    DebugView()
+                }
+                #endif
+                .feelItModelContainer()
         }
-        .modelContainer(for: Palette.self)
     }
     
     #if !os(macOS)
-    func setUpNavigationTitleFont() {
-        let appearence = UINavigationBar.appearance()
+    @MainActor func setUpNavigationTitleFont() {
+        let appearance = UINavigationBar.appearance()
         
         let largeNavTitleFont = UIFont.systemFont(ofSize: 34, weight: .bold, width: .expanded)
         let largeTitleFontMetrics = UIFontMetrics(forTextStyle: .largeTitle)
@@ -31,8 +46,8 @@ struct FeelItApp: App {
         let navTitleFont = UIFont.systemFont(ofSize: 17, weight: .semibold, width: .expanded)
         let headlineFontMetrics = UIFontMetrics(forTextStyle: .body)
         
-        appearence.largeTitleTextAttributes = [.font: largeTitleFontMetrics.scaledFont(for: largeNavTitleFont)]
-        appearence.titleTextAttributes = [.font: headlineFontMetrics.scaledFont(for: navTitleFont)]
+        appearance.largeTitleTextAttributes = [.font: largeTitleFontMetrics.scaledFont(for: largeNavTitleFont)]
+        appearance.titleTextAttributes = [.font: headlineFontMetrics.scaledFont(for: navTitleFont)]
     }
     #endif
 }
