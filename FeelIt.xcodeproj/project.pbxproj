@@ -19,6 +19,7 @@
 		8961EE312A51961C00ED28A1 /* FeelItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8961EE302A51961C00ED28A1 /* FeelItApp.swift */; };
 		8961EE352A51961D00ED28A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8961EE342A51961D00ED28A1 /* Assets.xcassets */; };
 		8961EE382A51961D00ED28A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8961EE372A51961D00ED28A1 /* Preview Assets.xcassets */; };
+		8997578C2AF98D6C00289B2F /* Previewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8997578B2AF98D6C00289B2F /* Previewer.swift */; };
 		89FE23D02AEB00EA000F7CEB /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE23CF2AEB00EA000F7CEB /* ColorData.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		8961EE302A51961C00ED28A1 /* FeelItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelItApp.swift; sourceTree = "<group>"; };
 		8961EE342A51961D00ED28A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8961EE372A51961D00ED28A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8997578B2AF98D6C00289B2F /* Previewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewer.swift; sourceTree = "<group>"; };
 		89FE23CF2AEB00EA000F7CEB /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				89300B502AF56F7300A73C35 /* FeelItModelContainer.swift */,
+				8997578B2AF98D6C00289B2F /* Previewer.swift */,
 				89300B542AF57CC600A73C35 /* DebugView.swift */,
 			);
 			path = Configuration;
@@ -199,6 +202,7 @@
 				8941A1B62A6D8A320000F4B7 /* Palette.swift in Sources */,
 				8941A1BC2A6D94DA0000F4B7 /* Feeling.swift in Sources */,
 				8941A1B42A6D7FD40000F4B7 /* ContentView.swift in Sources */,
+				8997578C2AF98D6C00289B2F /* Previewer.swift in Sources */,
 				89300B4F2AF56D6F00A73C35 /* Color-Hex.swift in Sources */,
 				89300B512AF56F7300A73C35 /* FeelItModelContainer.swift in Sources */,
 				8941A1B82A6D90F50000F4B7 /* PaletteItem.swift in Sources */,
