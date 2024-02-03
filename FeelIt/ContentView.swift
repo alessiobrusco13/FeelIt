@@ -11,6 +11,8 @@ struct ContentView: View {
     @EnvironmentObject private var model: Model
     @State private var path = NavigationPath()
     
+    @State private var showInfo = false
+    
     var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 360), spacing: 20)]
     }
@@ -55,9 +57,17 @@ struct ContentView: View {
                                 .font(.title3)
                         }
                     }
+                    .toolbar {
+                        ToolbarItem(placement: .bottomBar) {
+                            Button("Info", systemImage: "info.circle") {
+                                showInfo.toggle()
+                            }
+                        }
+                    }
                 }
                 .navigationTitle("Palettes")
             }
+            .sheet(isPresented: $showInfo, content: AboutView.init)
         }
     }
     

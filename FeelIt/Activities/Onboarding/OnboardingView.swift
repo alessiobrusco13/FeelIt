@@ -147,17 +147,15 @@ struct OnboardingView: View {
                                 .accessibilityFocused($focused, equals: 4)
                                 .tag(4)
                                 
-                                VStack {
-                                    featureLabel("Note", systemImage: "iphone")
-                                    
-                                    Text("To ensure you have the best experience possible, please run on a phisical device.\nThe app is fully compatible with iPhones, iPads and VoiceOver.")
-                                        .font(.headline)
-                                        .padding()
-                                }
-                                .accessibilityFocused($focused, equals: 5)
-                                .tag(5)
-                                
-                                
+//                                VStack {
+//                                    featureLabel("Note", systemImage: "iphone")
+//                                    
+//                                    Text("To ensure you have the best experience possible, please run on a phisical device.\nThe app is fully compatible with iPhones, iPads and VoiceOver.")
+//                                        .font(.headline)
+//                                        .padding()
+//                                }
+//                                .accessibilityFocused($focused, equals: 5)
+//                                .tag(5)
                             }
                             .tabViewStyle(.page(indexDisplayMode: .never))
                             .padding(.top, 50)
@@ -172,7 +170,7 @@ struct OnboardingView: View {
                     Spacer()
                     
                     Button {
-                        guard selection < 5 else {
+                        guard selection < 4 else {
                             dismiss()
                             return
                         }
@@ -197,7 +195,7 @@ struct OnboardingView: View {
                         Image(systemName: "rotate.left")
                             .font(.largeTitle)
                         
-                        Text("The welome screen only supports portrait mode on iPhone.\nPlease rotate your device.")
+                        Text("The welcome screen only supports portrait mode on iPhone.\nPlease rotate your device.")
                             .multilineTextAlignment(.center)
                     }
                     .foregroundStyle(.secondary)

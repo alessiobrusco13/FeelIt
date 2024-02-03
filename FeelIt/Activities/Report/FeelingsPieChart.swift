@@ -12,13 +12,13 @@ struct FeelingsPieChart: View {
     @ScaledMetric(relativeTo: .largeTitle) private var size = 120
     
     var chartDescription: String {
-        var descripiton = ""
+        var description = ""
         
         for feeling in report.feelings {
-            descripiton.append("\(feeling.text): \(report.formattedPercent(for: feeling)); ")
+            description.append("\(feeling.text): \(report.formattedPercent(for: feeling)); ")
         }
         
-        return descripiton
+        return description
     }
     
     var body: some View {
