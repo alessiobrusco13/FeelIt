@@ -57,13 +57,13 @@ struct ContentView: View {
                                 .font(.title3)
                         }
                     }
-                    .toolbar {
-                        ToolbarItem(placement: .bottomBar) {
-                            Button("Info", systemImage: "info.circle") {
-                                showInfo.toggle()
-                            }
-                        }
-                    }
+//                    .toolbar {
+//                        ToolbarItem(placement: .bottomBar) {
+//                            Button("Info", systemImage: "info.circle") {
+//                                showInfo.toggle()
+//                            }
+//                        }
+//                    }
                 }
                 .navigationTitle("Palettes")
             }
